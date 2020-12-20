@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+
+html,
+body {
+    height: 100%;
+    background: #f9fafb;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #ffffff;
+    display: grid;
+    place-items: center;
+}
+
+.title {
+    background: #0059a6;
+    color: #fff;
+    padding: 4px 0px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+.card {
+    display: grid;
+    border-radius: 15px;
+    color: #6f707d;
+    font-weight: 700;
+    margin: 12px;
+}
+
+.weatherBtn {
+    justify-self: center;
+    padding: 0px 19px;
+    border-radius: 12px;
+    background: #fff;
+    color: #0059a6;
+    border: none;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.div1 {
+    background-size: cover;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    height: 248px;
+}
+
+h1 {
+    font-size: 65px;
+}
+
+sup {
+    font-size: 17px;
+    position: relative;
+    top: -2rem;
+}
+
+*:focus {
+    outline: none;
+}
+
+.weatherinit {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-gap: 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.editBtn {
+    float: right;
+    padding: 0px 19px;
+    border-radius: 12px;
+    background: #fff;
+    color: #0059a6;
+    border: none;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form {
+    display: grid;
+    grid-gap: 22px;
+}
+
+.form-btn {
+    display: grid;
+    grid-template-columns: 96px 96px;
+    grid-gap: 17px;
+    justify-content: center;
+}
+
+.servermsg {
+    text-align: center;
+}
+
+.cityerr {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+}
+
+.cityerrtext {
+    font-size: 20px;
+}
+
+.showformbtn {
+    width: 75px;
+    justify-self: center;
+}

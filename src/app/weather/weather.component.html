@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="title">Weather Reports</div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-4 col-sm-12 col-xs-12" *ngFor="let weather of weatherReport; let i=index">
+            <div class="card text-white">
+                <div class="div1 p-4 p-md-5" [ngStyle]="{'background': ' url(' + weather.img  + ')'}"
+                    style="background-size: cover">
+
+                    <!--Initial loading-->
+                    <div class="weatherinit" *ngIf="weather.isInit">
+                        <p>Want to see weather report.</p>
+                        <button class="weatherBtn" (click)="getForm(i)">Click here!!!</button>
+                    </div>
+
+                    <!--Input Form-->
+                    <div *ngIf="weather.isForm" class="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Please Enter the City Name" #cityInput>
+                        </div>
+                        <div class="form-btn">
+                            <button class="btn btn-primary" (click)="getWeatherReport(i)">Submit</button>
+                            <button class="btn btn-danger" (click)="cancel(i)">Cancel</button>
+                        </div>
+
+                        <!--Server timeout msg-->
+                        <div class="alert alert-danger servermsg" *ngIf="weather.serverError">Something went wrong.
+                            Please Try
+                            again</div>
+                    </div>
+
+                    <!--Weather Details-->
+                    <ng-container *ngIf="weather.isDetails">
+                        <h5>{{weather.city}}</h5>
+                        <h1>{{weather.temp}}<sup>°C </sup> </h1>
+                        <p class="my-0">Feels Like {{weather.feels}}</p>
+                        <h4 class="my-0">{{weather.desc}}</h4>
+                        <button class="my-0 editBtn" (click)="edit(i)">Edit</button>
+                    </ng-container>
+
+                    <!--Error Messages-->
+                    <div class="cityerr" *ngIf="weather.isError">
+                        <div class="cityerrtext">
+                            City Not Found. Please enter valid city name
+                        </div>
+                        <button class="btn btn-danger showformbtn" (click)="showForm(i)">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
